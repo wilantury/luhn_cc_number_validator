@@ -14,5 +14,5 @@ def CardValidation(request):
         issuer = check_issuer(cc_number)
         if issuer:
             return Response({"Issuer":issuer}, status=status.HTTP_200_OK)
-        return Response({"Issuer":"Is not possible to findout he Credit Card Issuer, Altough the CC number is valid"}, status=status.HTTP_200_OK)
+        return Response({"Issuer":"Is not possible to findout the Credit Card Issuer, Altough the CC number is valid"}, status=status.HTTP_200_OK)
     return Response({"Error":"The Credit card number is invalid"}, status=status.HTTP_200_OK)
