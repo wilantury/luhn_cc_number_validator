@@ -2,7 +2,7 @@
 
   
 
-## Credit card number validator using LUMH algorithm.
+> ### Credit card number validator using LUMH algorithm.
 
   
 
@@ -41,12 +41,12 @@ The app is running in DEBUG mode, therefore you can test the API using the web b
 Put into ``` cc_number``` the card number you want to validate.
 
   
+# Local
+### local API: ``` http://localhost:8000/api/v1/card_validation```
 
-local API: ``` http://localhost:8000/api/v1/card_validation```
+#### Method: POST
 
-method: POST
-
-Body:
+#### Body:
 
 ``` 
 {
@@ -54,10 +54,31 @@ Body:
 }
 ```
 
-Response:
+#### Response:
 
 ``` 
 {
 	"Issuer": "Visa"
 }
 ```
+
+# AWS EC2 - docker deployed
+> This little API was deployed using AWS EC2, docker, docker-compose, trafeik. **Debug mode ON**
+### API: https://ccvalidator.hardmakers.com/api/v1/card_validation
+
+#### Method: POST
+
+#### Body:
+
+``` 
+{
+	"cc_number":"4111111111111111"
+}
+```
+
+#### Response:
+
+``` 
+{
+	"Issuer": "Visa"
+}
